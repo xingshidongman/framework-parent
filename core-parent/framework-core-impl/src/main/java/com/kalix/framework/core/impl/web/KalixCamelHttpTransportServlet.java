@@ -167,8 +167,8 @@ public class KalixCamelHttpTransportServlet extends CamelHttpTransportServlet {
         String bizName = request.getPathInfo();
         //请求的最后是以s结尾的
         boolean getAll = bizName.substring(bizName.length() - 1, bizName.length()).equals("s");
-        boolean isBizReq = bizName.split("/").length == 2; // 请求只包括一个字符串"/"
-        if ((request.getMethod().equals("GET")) && path && getAll && isBizReq)
+        // boolean isBizReq = bizName.split("/").length == 2; // 请求只包括一个字符串"/" && isBizReq
+        if ((request.getMethod().equals("GET")) && path && getAll )
             return true;
         return false;
     }
